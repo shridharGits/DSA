@@ -1,0 +1,17 @@
+-- to connect git hub repo to git
+git remote add origin https://github.com/shridharGits/LearningGit
+
+-- to get all repos related to folder
+git remote -v
+
+-- to clone someones repo first fork it
+-- git clone https://github.com/visualcrossing/WeatherIcons.git
+
+-- to work on cloned repo
+git remote add upstream https://github.com/visualcrossing/WeatherIcons.git
+
+-- never work on main branch, create another branch
+git branch shridharGits
+
+-- to see branch
+git checkout shridhar

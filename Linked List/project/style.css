@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(14, 12, 12);
+    color: white;
+}
+
+.input-form{
+    width: 20%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

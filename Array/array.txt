@@ -1,0 +1,29 @@
+http://courses.washington.edu/css342/zander/css332/array.html
+https://people.eecs.ku.edu/~jrmiller/Courses/JavaToC++/StackAllocatedArrays.html
+
+Static arrays
+the arrays whose size is fixed at compile time (compile -> static)
+int a[5];
+
+statically declared arrays (like int a[5]) are going to be stored on a stack
+
+look at this example: int arr[n];
+
+It doesn't matter that n is computed dynamically; arr will still be stored on the stack. 
+This declaration essentially translates to a call to alloca(sizeof(int) * n). 
+All that it does is adjust the stack pointer to make room for the arr array.
+
+The term 'heap' usually refers to the memory that is managed by malloc and new for 
+dynamic memory allocation. In this sense the only memory that is on the heap is the
+memory allocated through these calls. Of course, it's also possible to create arrays 
+that are neither in the global data section, stack, nor heap using a call like mmap.
+
+when we declare int a[5]: 5 continues memory locations are filled with garbage values
+
+
+Dyanamic arrays
+the arrays whose size can be changed
+int* arrayPtr = new int[10];
+
+heap objects are not continues
+
