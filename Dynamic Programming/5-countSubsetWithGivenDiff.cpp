@@ -25,6 +25,14 @@ int countSubset(int arr[], int sum, int n){
         }
         
     }
+    for (int i = 0; i < n+1; i++)
+    {
+        for (int j = 0; j < sum+1; j++)
+        {
+            cout<<t[i][j]<<"  ";
+        }
+        cout<<endl;
+    }
     return t[n][sum];
 }
 
@@ -35,12 +43,13 @@ int countSubsetWithGivenDiff(int arr[], int diff, int n){
         sum += arr[i];
     }
     sum = (diff + sum)/2;
+    cout<<"sum "<<sum<<endl;
     countSubset(arr,sum,n);
 }
 
 int main(){
-    int arr[] = {2,7,1,1,2,1};
-    int diff = 2;
-    cout<<countSubsetWithGivenDiff(arr, diff, 6);
+    int arr[] = {0,0,0,0,0,0,0,0,1};
+    int diff = 1;
+    cout<<countSubsetWithGivenDiff(arr, diff, 9);
     return 0;
 }
