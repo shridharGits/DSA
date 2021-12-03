@@ -50,6 +50,7 @@ int countSubsetWithGivenDiff(int arr[], int diff, int n){
 int main(){
     int arr[] = {0,0,0,0,0,0,0,0,1};
     int diff = 1;
+    
     cout<<countSubsetWithGivenDiff(arr, diff, 9);
     return 0;
 }
