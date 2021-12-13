@@ -23,6 +23,7 @@ int main(){
     // cout<<getBit(5,2);
     // cout<<setBit(5,1);
     // cout<<clearBit(5,2);
-    cout<<updateBit(5,1,1);
+    // cout<<updateBit(5,1,1);
+    cout<<!(8&7)<<endl;
     return 0;
 }
