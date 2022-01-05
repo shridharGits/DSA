@@ -18,7 +18,7 @@ bool subsetSum(int arr[], int n, int sum){
             }
             else{
                 if(arr[i-1]<=j){
-                    t[i][j] = t[i-1][j-arr[i-1]] || t[i-1][j];
+                    t[i][j] = t[i][j-arr[i-1]] + t[i-1][j];
                 }
                 else{
                     t[i][j] = t[i-1][j];
@@ -36,16 +36,14 @@ bool subsetSum(int arr[], int n, int sum){
         }
         cout<<endl;
     }
-    
 
     return t[n][sum];   
-    
 }
 
 int main(){
-    int arr[] = {4,2,7,1,3};
-    int sum = 11;
+    int arr[] = {3,5,10};
+    int sum = 13;
 
-    subsetSum(arr,5,sum);
+    subsetSum(arr,3,sum);
     return 0;
 }
