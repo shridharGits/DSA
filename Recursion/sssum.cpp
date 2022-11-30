@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int i = 0;
 int c = 0;
 void subsetSum(int i,int arr[],int a, int b, int n, int sum){
@@ -14,7 +13,9 @@ void subsetSum(int i,int arr[],int a, int b, int n, int sum){
 	sum+=arr[i];
 	subsetSum(i+1,arr,a,b,n,sum);
 	sum-=arr[i];
+	sum+= -arr[i];
 	subsetSum(i+1,arr,a,b,n,sum);
+	sum-=arr[i];
 }
 int main() {
 	int n,a,b;

@@ -38,8 +38,28 @@ int countSubsetSum(int arr[], int n, int sum){
 }
 
 int main(){
-    int arr[] = {2,3,5,6,8,10};
-    int sum = 10;
-    cout<<countSubsetSum(arr, 6, 10);
+    int arr[] = {0,0,0,0,0,0,0,0,1};
+    int sum = 1;
+    cout<<countSubsetSum(arr, 9,1);
     return 0;
 }
+/*
+int arr[] = {0,0,0,0,0,0,0,0,1};
+    int sum = 1;
+if there are zeros in testcase like above eg
+int m = 1e9+7;
+	    
+	    for(int i = 0; i<sum+1; i++){
+	        t[0][i] = 0;
+	    }
+	    
+        t[0][0] = 1;
+        
+	    int z = 0;
+	    for(int i = 0; i<n; i++){
+	        if(arr[i] == 0){
+	            z++;
+	        }
+	        t[i+1][0] = pow(2,z);
+	    }
+*/

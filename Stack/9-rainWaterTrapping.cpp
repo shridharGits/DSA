@@ -18,8 +18,6 @@ void rainWaterTrapping(int arr[], int n){
     {
         maxr[i] = max(maxr[i+1], arr[i]);
     }
-
-
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
@@ -29,7 +27,7 @@ void rainWaterTrapping(int arr[], int n){
 }
 
 int main(){
-    int arr[] = {3,0,0,2,0,4};
-    rainWaterTrapping(arr, 6);
+    int arr[] = {1,8,6,2,5,4,8,3,7};
+    rainWaterTrapping(arr, 9);
     return 0;
 }

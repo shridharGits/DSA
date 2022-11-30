@@ -115,15 +115,19 @@ int MAH(vector <int> v){
 
 int main(){
     auto start = high_resolution_clock::now();
-    int arr[2][5] = {{1,1,1,1,1}, {0,1,0,0,0}};
-    int n = 2;
-    int m = 5;
+    int arr[4][4] = {
+        {0,1,1,0}, 
+        {1,1,1,1}, 
+        {1,1,1,1}, 
+        {1,1,0,0}};
+    int n = 4;
+    int m = 4;
     vector <int> v;
     for (int j = 0; j<m; j++){
         v.push_back(arr[0][j]);
     }
     int maxAreaRect = MAH(v);
-    cout<<maxAreaRect<<endl;
+    // cout<<maxAreaRect<<endl;
     for (int i = 1; i < n; i++)
     {
         for (int j = 0; j < m; j++)
@@ -141,6 +145,6 @@ int main(){
     cout<<maxAreaRect<<endl;
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
-    cout << duration.count()/1000000 << endl;
+    // cout << duration.count()/1000000 << endl;
     return 0;
 }
